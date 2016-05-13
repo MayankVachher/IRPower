@@ -1,0 +1,165 @@
+.textarea {
+	width: 60vw;
+	height: 50vh;
+	font-family: 'Inconsolata';
+	resize: none;
+}
+
+button {
+	width: 20vw;
+}
+
+#ourTitle {
+	margin-bottom: 50px;
+}
+
+#anotherButton {
+	text-align: right;
+	width: initial;
+}
+
+.setWidth {
+	width: 80vw;
+}
+
+code { 
+    background: hsl(220, 80%, 90%);
+    width: 100%;
+    height: 50vh;
+}
+
+pre {
+    background: hsl(220, 80%, 90%);
+    width: 100%;
+}
+
+.box {
+	background: #f5f7fa	;
+}
+
+#range {
+	height: 50vh;
+	background: #1fc8db;
+	margin: 0;
+	margin-top: 30px;
+	margin-left: 10px;
+}
+
+.noUi-value {
+	color: #fff;
+}
+
+.noUi-value-sub {
+	color: #fff;
+}
+
+.noUi-target {
+	border: none;
+}
+
+.noUi-marker {
+	background: #eee;
+}
+
+.footer {
+	font-family: 'Inconsolata';
+	font-size: 18px;
+	background: #222;
+	padding: 0;
+	padding-bottom: 10px;
+	padding-top: 15px;
+}
+
+
+#heart {
+    position: relative;
+    width: 20px;
+    height: 18px;
+}
+#heart:before,
+#heart:after {
+    position: absolute;    
+	-webkit-animation: heart 1s linear infinite;
+    content: "";
+    left: 10px;
+    top: 0;
+    width: 10px;
+    height: 16px;
+    background: red;
+    -moz-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+}
+
+#heart-container {
+    width: 20px;
+    height: 18px;
+    animation: pulsate 0.8s ease-in-out infinite;
+    -webkit-animation: pulsate 0.8s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.1)
+    }
+    45% {
+        transform: scale(1.5);
+    }
+    55% {
+        transform: scale(1.2);
+    }
+    62% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    20% {
+        -webkit-transform: scale(1.1)
+    }
+    45% {
+        -webkit-transform: scale(1.5);
+    }
+    55% {
+        -webkit-transform: scale(1.2);
+    }
+    62% {
+        -webkit-transform: scale(1.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+.footer a {
+	color: #1fc8db;
+	border: none;
+}
+
+.footer a:not(.icon) {
+	border: none;
+}
+
+.footer a:hover {
+	color: red;
+	border: none;
+}

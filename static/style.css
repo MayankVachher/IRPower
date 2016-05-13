@@ -1,0 +1,46 @@
+.outer {
+	height: 100vh;
+	width: 100%;
+	display: table;
+	text-align: center;
+}
+
+.inner {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.content {
+	display: inline-block;
+	text-align: left;
+}
+
+#VaCla1 {
+	width: 25vw;
+}
+
+.form-control {
+	border-radius: 0;
+}
+
+.btn {
+	border-radius: 0;
+	background-color: #22a7f0;
+	border-color: #22a7f0;
+}
+
+#VaCla1::-webkit-input-placeholder {
+	color: #999;
+}
+
+#VaCla1:-moz-placeholder {
+	color: #999;
+}
+
+#VaCla1::-moz-placeholder {
+	color: #999;
+}
+
+#VaCla1:-ms-input-placeholder {
+	color: #999;
+}
