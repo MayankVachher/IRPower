@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>Variable Classifier</title>
+		<link rel="stylesheet" href="/static/flatstrap.css">
+		<link rel="stylesheet" href="/static/flatstrap-theme.css">
+		<link rel="stylesheet" type="text/css" href="/static/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="outer">
+				<div class="inner">
+					<div class="content">
+						<!-- <label for="VaCla1">Variable Classifiers</label> -->
+						<small class="text-muted">Input the variable for word breaking</small>
+						<form class="form-inline" method="POST">
+							<!-- <div class="form-group">
+								<label for="VaCla1">Variable Classifiers</label>
+								<input type="text" class="form-control" id="VaCla1" placeholder="Enter Variable">
+							</div>
+							<button type="submit" class="btn btn-primary">Submit</button> -->
+							<fieldset class="form-group">
+								<input type="text" class="form-control" id="VaCla1" placeholder="Enter variable" name="user_var">
+							</fieldset>
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</form>
+						{% if notFirstTime %}
+						<small class="text-muted">Result:</small>
+						<div class="res">
+						<p><b>Input: </b><span>{{ query }}</span></p>
+							{% if hasError %}
+								<p>Error! Variable has unidentified characters!</p>
+							{% else %}
+								<p><b>Recommendations: </b></p>
+									{% if reco %}
+										{% for val in reco %}
+										<li>{{ val }}</li>
+										{% endfor %}
+									{% else %}
+										<p>No Recommendation possible</p>
+									{% endif %}
+							{% endif %}
+						</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
