@@ -1,24 +1,23 @@
 from flask import *
 from collections import Counter
-from suggestionGenerator import check
 
 app = Flask(__name__)
 
-@app.route('/surprise', methods=["GET","POST"])
-def hello_world():
-	t = request.method
-	resp = ""
-	if t == "GET":
-		resp = resp = render_template("home_surprise.html", query='', reco='', hasError='', notFirstTime=None)
-	else:
-		user_inp = request.form["user_var"]
-		user_inp = user_inp.strip()
-		hasError = not set(user_inp.strip().lower()).issubset(set('abcdefghijklmnopqrstuvwxyz_'))
+# @app.route('/surprise', methods=["GET","POST"])
+# def hello_world():
+# 	t = request.method
+# 	resp = ""
+# 	if t == "GET":
+# 		resp = resp = render_template("home_surprise.html", query='', reco='', hasError='', notFirstTime=None)
+# 	else:
+# 		user_inp = request.form["user_var"]
+# 		user_inp = user_inp.strip()
+# 		hasError = not set(user_inp.strip().lower()).issubset(set('abcdefghijklmnopqrstuvwxyz_'))
 		
-		reco_gen = check(user_inp.lower())
-		hasError = None
-		resp = render_template("home_surprise.html", query=user_inp, reco=reco_gen, hasError=hasError, notFirstTime=True)
-	return resp
+# 		reco_gen = check(user_inp.lower())
+# 		hasError = None
+# 		resp = render_template("home_surprise.html", query=user_inp, reco=reco_gen, hasError=hasError, notFirstTime=True)
+# 	return resp
 
 @app.route('/')
 def render_homepage():
